@@ -17,11 +17,16 @@ export default class PersonList extends React.Component {
   // }
 
   componentDidMount() {
-    axios.get(`https://rickandmortyapi.com/api/character/`)
+    axios.get('https://rickandmortyapi.com/api/character')
       .then(res => {
         console.log(res.data.results);
+        // 1.- como se llama igual se sobre escribe asi mismo  
         const persons = res.data.results;
         this.setState({ persons });
+
+        // 2 .- 
+        // const pers = res.data.results;
+        // this.setState({persons: pers})
       })
   }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button,Col,Card, ListGroupItem, ListGroup} from 'react-bootstrap';
+import {Button,Col,Card} from 'react-bootstrap';
 import './Character.css';
 
 class Character extends React.Component{
