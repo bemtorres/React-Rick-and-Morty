@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import List  from './components/PersonList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {Container,Row,Col, Navbar, Nav} from 'react-bootstrap';
+
+class App extends React.Component{
+  render(){
+
+    return (
+      <div className="App">
+        <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+          <Navbar.Brand href="#home">React Rick And Morty</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="#features">Personajes</Nav.Link>
+              <Nav.Link href="#pricing">Episodios</Nav.Link>          
+            </Nav>
+            <Nav>
+              <Nav.Link href="https://www.bemtorres.win/">@Bemtorres</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+        <Container>
+          <Row>       
+            <List />
+          </Row>
+        </Container>
+      </div>
+    );
+  }; 
 }
 
 export default App;
