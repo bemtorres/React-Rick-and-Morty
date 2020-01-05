@@ -5,16 +5,16 @@ class Description extends React.Component{
     constructor(props){
         super();
         this.state = {
-            Modal : false,       
+            Modal : false     
             
         } 
        
     }
   
-
     toggle(){
         this.setState(prevState => ({
-            modal: !prevState.modal,
+           
+            show: !prevState.show,
         }));
     }
 
@@ -28,15 +28,32 @@ class Description extends React.Component{
         return(
             <div>
             <Button variant="success" onClick={this.toggle}>Ver Personaje</Button>
-            
-            <Modal.Dialog>
+         
+            {/* <Modal show="false"  onHide="false" animation="false">
                 <Modal.Header closeButton>
                 <Modal.Title>{ this.props.props.name }</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>
-                    <Table>
+                    <Table responsive>
+                    <tbody>
+                        <tr>
+                            <td><strong>Status: </strong>{ this.props.props.status }</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Species: </strong>{ this.props.props.species }</td>
+                        </tr>
                         
+                        <tr>
+                            <td><strong>Type: </strong>{ this.props.props.type }</td>
+                        </tr>
+                        <tr>
+                            <td><strong>garden: </strong>{ this.props.props.garder }</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Location: </strong>{ this.props.props.location.name }</td>
+                        </tr>
+                    </tbody>
                     </Table>
                 </Modal.Body>
 
@@ -44,7 +61,7 @@ class Description extends React.Component{
                     <Button variant="secondary">Close</Button>
                     <Button variant="primary">Save changes</Button>
                 </Modal.Footer>
-            </Modal.Dialog>
+            </Modal> */}
             </div>
         );
     }
