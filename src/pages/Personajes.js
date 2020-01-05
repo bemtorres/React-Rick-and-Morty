@@ -6,6 +6,9 @@ export default function Personajes(){
     return(
         <div>
             <Container>
+                <hr />
+                <h5>Personajes Rick And Morty</h5>
+                <hr />
             <Row>       
                 <List />
             </Row>

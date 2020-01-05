@@ -1,13 +1,14 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import List  from '../components/PersonList';
 
-export default function Home(){
+export default function Episode(){
     return(
         <div>
             <Container>
+                <h5>Episodios Especiales</h5>
+                <hr></hr>
             <Row>       
-                <h1 className="text-center">Proyecto creado en React</h1>
+               
             </Row>
             </Container>
         </div>

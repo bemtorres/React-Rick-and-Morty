@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import Personajes from './pages/Personajes';
-import Home from './pages/Home';
+import Episodio from './pages/Episode';
+
 import {Navbar, Nav, Button} from 'react-bootstrap';
 
 
@@ -17,7 +18,7 @@ class App extends React.Component{
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
-                <Link to="/personajes">
+                <Link to="/">
                   <Button>Personajes</Button>
                 </Link>
                 <Link to="/episodios">
@@ -31,15 +32,14 @@ class App extends React.Component{
             </Navbar.Collapse>
           </Navbar>
           <Switch>
-            <Route path="/personajes">
+            <Route path="/">
               <Personajes />
             </Route>
             <Route path="/episodios">
-              <Personajes />
+              <Episodio />
             </Route>
           </Switch>
         </Router>     
-        <Home/>  
       </div>
     );
   }; 
